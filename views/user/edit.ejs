@@ -1,0 +1,54 @@
+<br>
+<br>
+<form action="/user/update/<%= user.id %>" method="POST" id="myform">
+
+<h2> You can Edit User now</h2>
+
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input value="<%= user.firstName %>" type="text" class="form-control" name="firstName" id="firstName"
+                    placeholder="edit First Name">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input value="<%= user.lastName %>" type="text" class="form-control" name="lastName" id="lastName"
+                    placeholder="Enter Last Name">
+                </div>
+				<div class="form-group">
+                    <label for="email">Email:</label>
+                    <input value="<%= user.email %>" type="email" class="form-control" name="email" id="email" placeholder="someone@something.com">
+                </div>
+                <div class="form-group">
+                    <label for="netid">NetID:</label>
+                    <input value="<%= user.netID %>" type="NetID" class="form-control" name="netID" id="netID" placeholder="NetID">
+                </div>
+                <div class="form-group">
+                    <label for="tel">Telephone:</label>
+                    <input value="<%= user.tel %>" type="tel" class="form-control" id="tel" name="tel" placeholder="edit tel">
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input value="<%= user.city %>" type="text" class="form-control" id="city" name="city" placeholder="edit City">
+                </div>
+                <div class="form-group">
+                    <label for="state">State:</label>
+                    <input value="<%= user.state %>" type="text" class="form-control" id="state" name="state" placeholder="edit state">
+                </div>
+                <div class="form-group">
+                    <label for="schoolName">School Name:</label>
+                    <input value="<%= user.schoolName %>" type="text" class="form-control" id="state" name="schoolName" placeholder="edit schoolname">
+                </div>
+                <div class="form-group">
+                    <label for="status">Status:</label>
+                    <input value="<%= user.status %>" type="text" class="form-control" id="selects" name="status" placeholder="edit status">
+                </div>
+                <div class="form-group">
+                    <label for="term">Term:</label>
+                    <input value="<%= user.term %>" type="text" class="form-control" id="major" name="term" placeholder="edit term">
+                </div>
+
+
+	<input type="submit" value="Proceed..." class="btn btn-lg btn-success" />
+	<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+
+</form>	

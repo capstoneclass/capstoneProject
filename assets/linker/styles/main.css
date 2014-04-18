@@ -1,0 +1,342 @@
+body {
+
+    height: 100%;
+  
+}
+
+
+.starter-template {
+    margin-top: 60px;
+}
+
+.container {
+    width:100%;
+}
+.dropdown {
+    display: inline-block;
+}
+.userReg {
+    
+    float:right;
+    color: red;
+    font-size: 1em;
+    margin-top:10px;
+    margin-right:20px;
+    
+}
+
+
+#login{
+    
+    width:500px;
+    float:right;
+}
+.jumbotron {
+    
+    margin-top:20px;
+    
+}
+
+.logo {
+    width:20px;
+    height:20px;
+    float:right;
+    margin-top:20px;
+    
+}
+footer {
+    width:100%;
+    height: 45px;
+    border-top: 1px solid grey;
+    /*background-color:#282828;*/
+    background-color:maroon;
+}
+footer p {
+    font-size:1.1em;
+    font-weight:bold;
+    color:#FFFFFF;
+    margin-left:45%;
+    padding: 10px;
+    
+}
+.row {
+    margin-left:20px;
+    width:95%;
+}
+
+blockquote p{
+    font-size:1em;
+    font-family: Georgia ;
+}
+
+p {
+    font-size: 1.2em;
+    font-family: Georgia ;
+    
+}
+
+
+
+
+/*************************************************************/
+/******************* form markup  ******************************/
+
+
+.formnav {
+        height:50px;
+        background-color:maroon;
+}
+.formnav h3 {
+    margin-top:0;
+}
+
+#formAllign {
+ width:960px;
+ margin-top: 70px;
+ margin-left:15%; 
+ margin:70px auto 0 auto;
+    
+}
+
+#firstName{
+    width:50%; 
+    float:right; 
+    margin-right:35%;
+    border:1px solid lightgreen;
+
+}
+#lastName{
+    
+     width:50%; 
+    float:right; 
+    margin-right:35%;
+    border:1px solid lightgreen;
+}
+#passwd{
+    
+     width:50%; 
+    float:right; 
+    margin-right:35%;
+    border:1px solid lightgreen;
+
+}
+#passwdConf {
+
+    width:50%; 
+    float:right; 
+    margin-right:35%;
+    border:1px solid lightgreen;
+
+}
+
+
+#email {
+    width:50%; 
+    float:right; 
+    margin-right:35%;
+    border:1px solid lightgreen;
+}
+
+#netID {
+    width:50%; 
+    float:right; 
+    margin-right:35%;
+    border:1px solid lightgreen;
+}
+
+#tel {
+    
+    width:50%; 
+    float:right; 
+    margin-right:35%;
+    border:1px solid lightgreen;
+}
+#city {
+    
+    width:50%; 
+    float:right; 
+    margin-right:35%;
+    border:1px solid lightgreen;
+
+}
+
+#state {
+   width:50%; 
+    float:right; 
+    margin-right:35%;
+    border:1px solid lightgreen;
+
+}
+
+#selects {
+   width:50%; 
+    float:right; 
+    margin-right:35%;
+    border:1px solid lightgreen;
+}
+
+#address{
+    
+    width:50%; 
+    float:right; 
+    margin-right:35%;
+    border:1px solid lightgreen;
+
+}
+#major{
+    
+    width:50%; 
+    float:right; 
+    margin-right:35%;
+    border:1px solid lightgreen;
+}
+
+
+#dept{
+    
+   width:50%; 
+    float:right; 
+    margin-right:35%;
+    border:1px solid lightgreen;
+
+}
+#location{
+    
+   width:50%; 
+    float:right; 
+    margin-right:35%;
+    border:1px solid lightgreen;
+
+}
+
+#graduation{
+    
+   width:50%; 
+    float:right; 
+    margin-right:35%;
+    border:1px solid lightgreen;
+}
+#major1{
+    
+   width:50%; 
+    float:right; 
+    margin-right:35%;
+    border:1px solid lightgreen;
+    
+}
+
+#upload {
+    float:right;
+    margin-right:55%;
+    
+}
+
+#uploadLabel {
+    font-weight:bold;
+    margin-left:0;
+    
+}
+
+
+#terms, #terms1 {
+    
+    color:red;
+}
+
+#show {
+    margin-left:5%;
+   
+}
+
+.checkbox {
+    margin-top:0;
+
+}
+
+#submit {
+    
+    width:15%;
+    height:30px;
+    border-radius:10px;
+    
+}
+
+#submit:hover {
+    background-color:#0099FF;
+    
+}
+
+#bodyScroll{
+    width: 100%;
+    float:left;
+    height: 75%;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+
+.modal-dialog {
+    
+    height:90%;
+}
+.modal-content{
+    height:100%;  
+    width: auto;
+    margin-left: auto;
+    overflow:hidden;
+}
+
+.modal-footer {
+    height:30%;
+}
+
+
+#closeBtn {
+    margin-top: 5%;
+}
+
+#agreeBtn {
+    margin-top: 5%;
+}
+
+
+/***********************************
+************about markup***********/
+
+.belowNav {
+    
+    margin: 100px 50px;
+
+
+}
+
+.belowNav img {
+    float:right;
+    margin-left: 40px;
+    margin-right: 20px;
+    width:250px;
+}
+
+.belowNav h1 {
+
+    font-family:cursive;
+}
+
+
+
+/***********************************
+************Contact us*************/
+
+
+iframe {
+
+    float:right;
+    margin-left:15px;
+}
+
+.thanks {
+    font-family:cursive;
+    font-size:2.5em;
+}
+
+
