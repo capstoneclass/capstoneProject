@@ -1,0 +1,28 @@
+<div id="formAllign">
+    
+
+<form action="/session/create" method="POST" class="form-signin">
+	<h2 class="form-signin-heading">Sign In</h2>
+	<br>
+
+	<% if(flash && flash.err) { %>
+		<ul class="alert alert-success">
+	<% Object.keys(flash.err).forEach(function(error) { %>
+		<li><%- JSON.stringify(flash.err[error]) %></li>
+	<% }) %>
+	</ul>
+	<% } %>
+<div class="form-group">
+	Email: <input type="text" class="form-control" placeholder="Email address" name="email" id="email">
+</div>
+<div class="form-group">
+	Password: <input type="password" class="form-control" placeholder="Password" name="password" id="passwd">
+</div>
+
+<br>
+	<input type="submit" class="btn btn-md btn-primary" value="Sign-in"/>
+	<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+	
+</form>
+
+</div>

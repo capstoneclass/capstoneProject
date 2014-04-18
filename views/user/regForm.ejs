@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8" />
+        <title>Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="capstone/js/bootstrap.min.js"></script>
+        <!-- Bootstrap core CSS -->
+        <link href="capstone/css/bootstrap.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="capstone/css/main.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media
+        queries -->
+        <!--[if lt IE 9]>
+            <script src="../../assets/js/html5shiv.js"></script>
+            <script src="../../assets/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body>
+
+
+     <div id="formAllign">
+    
+            <form action="/user/create" method="POST" id="myform">
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" class="form-control" name="firstName" id="firstName"
+                    placeholder="Enter First Name">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" class="form-control" name="lastName" id="lastName"
+                    placeholder="Enter Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="someone@something.com">
+                </div>
+                <div class="form-group">
+                    <label for="netid">NetID:</label>
+                    <input type="NetID" class="form-control" name="netID" id="netID" placeholder="NetID">
+                </div>
+                <div class="form-group">
+                    <label for="passwd">Password:</label>
+                    <input type="password" class="form-control" name="password" id="passwd"
+                    placeholder="Enter password">
+                </div>
+
+       
+                <div class="form-group">
+                    <label for="passwd">Confirm Password:</label>
+                    <input type="password" class="form-control" name="passConfirmation" id="passwdConf"
+                    placeholder="Confirm password">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="tel">Telephone:</label>
+                    <input type="tel" class="form-control" id="tel" name="tel" placeholder="(xxx)-xxx-xxxx">
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" class="form-control" id="city" name="city" placeholder="Enter City">
+                </div>
+
+                <div class="form-group">
+                    <label for="state">State:</label>
+                    <select class="form-control" id="state" name="state">
+                        <option>New Jersey</option>
+                        <option>New York</option>
+                        <option>Pennsylvania</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="school">School Name:</label>
+                    <select class="form-control" id="state" name="schoolName">
+                        <option>select One</option>
+                        <option>Rutgers Univeristy</option>
+                        <option>New York University</option>
+                        <option>Pennsylvania State University</option>
+                        <option>Carnegie Mellon Universit</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="newDiv"></div>
+                <div class="form-group" id="secDiv"></div>
+                <div class="form-group" id="thirdDiv"></div>
+                <div class="form-group" id="fourthDiv"></div>
+                <div class="form-group" id="fifthDiv"></div>
+                <div class="form-group" id="sixthDiv"></div>
+                <div class="form-group" id="seventhDiv"></div>
+                <div class="form-group">
+                  
+                  <!--  <label for="PictureUpload" id="uploadLabel">Picture Upload (optional):</label>
+                    <input type="file" id="upload">
+                    <p class="help-block">Look cool on your profile</p>
+                </div>  -->
+
+                <div id="terms">
+                    <p>* You should see terms and conditions window</p>
+                </div>
+                <div id="terms1">
+                    <p>* Terms and conditions are checked</p>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="chckbox" disabled>
+                    <p>
+                    <strong>I agree to terms and conditions</strong>
+                    <a data-toggle="modal" href="#modal"
+                    class="btn btn-md" id="show">Terms and Conditions</a>
+                </p>
+                </div>
+                
+                <input type="submit" value="Create Account" id="submit" name="submit" />
+                <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+                
+        </div>
+        
+        
+        </form>
+        
+        
+        <!-- Modal -->
+        <div class="modal fade" id="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Terms and Conditions</h4>
+                    </div>
+                    <div class="modal-body" id="bodyScroll">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus felis
+                            leo, scelerisque non leo eget, dignissim malesuada nibh. Donec id laoreet
+                            metus. Suspendisse potenti. Nulla pellentesque dui ac nulla interdum rutrum.
+                            Sed non risus non justo tempus hendrerit non a tellus. Aliquam dignissim
+                            pharetra neque vel aliquam. Duis vehicula mi vitae ligula dapibus, at hendrerit
+                            nulla eleifend. Pellentesque habitant morbi tristique senectus et netus
+                            et malesuada fames ac turpis egestas.</p>
+                        <p>Nam faucibus interdum est. Sed non purus mauris. Duis gravida felis ante,
+                            eu mollis ipsum volutpat varius. Fusce porta, turpis vitae tincidunt rutrum,
+                            est elit faucibus nulla, ac varius metus nunc vel quam. Cras dignissim,
+                            nibh quis facilisis ullamcorper, ligula dolor condimentum orci, ut vehicula
+                            turpis mauris ac quam. Vivamus dignissim justo erat, at sodales velit convallis
+                            at. Integer lorem justo, eleifend ac venenatis in, rhoncus at nibh. Pellentesque
+                            sed mattis ipsum, ac congue ipsum. Nullam sollicitudin libero erat, sodales
+                            pellentesque ante venenatis ac.</p>
+                        <p>Morbi a lacinia massa. Phasellus convallis laoreet nisi, eget aliquet
+                            dolor porta vitae. Nullam non aliquam ligula, eu consequat tortor. Etiam
+                            ut lorem molestie eros porta elementum. Donec ac turpis tellus. Nulla sollicitudin
+                            dui nec condimentum condimentum. Proin vel nibh magna. Vivamus at interdum
+                            augue, nec congue sem. Fusce blandit fermentum justo eu feugiat. Praesent
+                            purus lorem, egestas feugiat neque nec, sodales interdum ante. Donec mollis
+                            vitae felis id rutrum. Duis gravida est vitae tortor vulputate, non vulputate
+                            enim blandit.</p>
+                        <p>Mauris dictum quam in elit adipiscing, nec euismod risus iaculis. Sed
+                            nec enim pulvinar, porttitor elit accumsan, mollis nibh. Duis arcu urna,
+                            gravida facilisis elit ut, ullamcorper mollis diam. Donec nec congue neque.
+                            Integer vel dolor adipiscing, lacinia nulla vel, aliquet sem. Morbi tempus
+                            lorem nec dolor aliquam hendrerit. Cras in suscipit eros. Etiam nec aliquet
+                            ipsum, dignissim vehicula ligula.</p>
+                        <p>Cras eget leo a mi pretium auctor.Nullam feugiat ante sit amet commodo
+                            iaculis. Proin faucibus metus vehicula venenatis scelerisque. Integer interdum
+                            elit vel risus pharetra, sed pharetra nisl tempus. Sed ac orci a lorem
+                            elementum tincidunt. Quisque lobortis, magna sed mattis aliquam, sem est
+                            mattis mi, vel varius sem augue vestibulum lorem. Donec semper dolor ornare,
+                            vulputate mi in, consectetur orci.</p>
+                        <p>Quisque tincidunt tincidunt eros vel molestie. Aliquam vitae ante non
+                            odio lobortis euismod eu tempus lacus. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Vivamus felis leo, scelerisque non leo eget, dignissim
+                            malesuada nibh. Donec id laoreet metus. Suspendisse potenti. Nulla pellentesque
+                            dui ac nulla interdum rutrum. Sed non risus non justo tempus hendrerit
+                            non a tellus. Aliquam dignissim pharetra neque vel aliquam. Duis vehicula
+                            mi vitae ligula dapibus, at hendrerit nulla eleifend. Pellentesque habitant
+                            morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                        <p>Nam faucibus interdum est. Sed non purus mauris. Duis gravida felis ante,
+                            eu mollis ipsum volutpat varius. Fusce porta, turpis vitae tincidunt rutrum,
+                            est elit faucibus nulla, ac varius metus nunc vel quam. Cras dignissim,
+                            nibh quis facilisis ullamcorper, ligula dolor condimentum orci, ut vehicula
+                            turpis mauris ac quam. Vivamus dignissim justo erat, at sodales velit convallis
+                            at.</p>
+                        <p>Integer lorem justo, eleifend ac venenatis in, rhoncus at nibh. Pellentesque
+                            sed mattis ipsum, ac congue ipsum. Nullam sollicitudin libero erat, sodales
+                            pellentesque ante venenatis ac. Morbi a lacinia massa. Phasellus convallis
+                            laoreet nisi, eget aliquet dolor porta vitae. Nullam non aliquam ligula,
+                            eu consequat tortor. Etiam ut lorem molestie eros porta elementum. Donec
+                            ac turpis tellus. Nulla sollicitudin dui nec condimentum condimentum.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="closeBtn">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal"
+                        id="agreeBtn">I Agree</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        </div>
+        
+        
+        <!-- /.modal -->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="jquery-1.10.2.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual
+        files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <!--<script type="text/javascript" src="js/form.js"></script>-->
+        <script type="text/javascript">
+            //new jQuery code 
+
+
+            $(document).ready(function() {
+
+
+                $("#newDiv").append("<label for='role' id='role'>Role:</label>");
+                $("#newDiv").append("<select class='form-control' id='selects' name='status'>");
+                $("#selects").append("<option value=''>Select one</option>");
+                $("#selects").append("<option id='student' value='student' >Student</option>");
+                $("#selects").append("<option id='faculty' value='faculty'>Faculty/Staff</option>");
+                $("#selects").append("<option id='alumni' value='alumni'>Alumni</option>");
+
+
+
+
+                // appended divs   
+
+                // for student selection
+
+
+                $("#secDiv").append("<label for='role' id='role' >Campus:</label>");
+                $("#secDiv").append("<input type='text' class='form-control' id='address' name='campus' placeholder='ex: New Brunswick'>");
+
+                $("#thirdDiv").append("<label for='role' id='role' >Term:</label>");
+                $("#thirdDiv").append("<input type='text' class='form-control' id='major' name='term' placeholder='ex: Spring 2014'>");
+
+                //for faculty selection
+
+                $("#fourthDiv").append("<label for='role' id='role'>Department:</label>");
+                $("#fourthDiv").append("<input type='text' class='form-control' id='dept' name='department' placeholder='Enter department'>");
+                $("#fifthDiv").append("<label for='role'  id='role'>Campus:</label>");
+                $("#fifthDiv").append("<input type='text' class='form-control' id='location' name='campus' placeholder='Enter campus'>");
+
+                //for alumni slection
+
+                $("#sixthDiv").append("<label for='role' id='role'>Year of Graduation:</label>");
+                $("#sixthDiv").append("<input type='text' class='form-control' id='graduation' name='gradYear' placeholder='MM/DD/YYYY'>");
+
+                $("#seventhDiv").append("<label for='role' id='role'>Major:</label>");
+                $("#seventhDiv").append("<input type='text' class='form-control' id='major1' name='major' placeholder='Specify your major'>");
+
+                //hide the divs by defult
+
+                $("#secDiv").hide();
+                $("#thirdDiv").hide();
+
+                $("#fourthDiv").hide();
+                $("#fifthDiv").hide();
+
+                $("#sixthDiv").hide();
+                $("#seventhDiv").hide();
+
+
+                //terms p hidden by default
+
+                $("#terms").hide();
+                $("#terms1").hide();
+
+
+                // action when user changes options in "select one" options
+
+                $("#selects").change(function() {
+
+                    if ($(this).val() == "student") {
+
+                        $("#secDiv").show();
+                        $("#thirdDiv").show();
+                    }
+                    else {
+
+                        $("#secDiv").hide();
+                        $("#thirdDiv").hide();
+                    }
+
+                });
+
+
+
+                $("#terms").fadeIn();
+
+        
+
+
+
+
+                $("#selects").change(function() {
+
+                    if ($(this).val() == "faculty") {
+
+
+                        $("#fourthDiv").show();
+                        $("#fifthDiv").show();
+                    }
+                    else {
+
+                        $("#fourthDiv").hide();
+                        $("#fifthDiv").hide();
+                    }
+
+                });
+
+
+                $("#selects").change(function() {
+
+                    if ($(this).val() == "alumni") {
+
+
+                        $("#sixthDiv").show();
+                        $("#seventhDiv").show();
+                    }
+                    else {
+
+                        $("#sixthDiv").hide();
+                        $("#seventhDiv").hide();
+                    }
+
+                });
+
+
+                // action listener when clicking agree button in scroll down that checks checkbox
+
+                $("#agreeBtn").click(function() {
+
+
+                    $("#chckbox").prop("checked", true);
+
+
+
+
+
+                    $("#terms").hide();
+                    $("#terms1").fadeIn();
+                });
+
+
+                // validation when submitting a form 
+
+                $("#myform").submit(function() {
+
+                    //make regex pattern
+
+
+                    var fnamePattern = /^[a-zA-Z\.\-\"\"]+$/;
+
+                    var LnamePattern = /^[a-zA-Z\-\"\"]+$/;
+
+                    var emailpattern = /^[a-zA-Z0-9_.,]+@[a-zA-Z0-9_]+(\.([a-zA-Z0-9_]{2,3})+)+$/;
+                    
+                    var netIDpattern = /^[a-zA-Z]{2}[0-9]{3}$/;
+
+                    var passwdpattern = /^[a-zA-Z0-9\-\!\"\#\$\%\&\'\(\)\*\+\,\.\/\:\;\<\=\>\?\@\[\\\]\_\`\{\|\}\~\ \]]+$/;
+
+                    var telPattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+                    var cityPattern = /^[a-zA-Z\" \"]+$/;
+
+                    var addrPattern = /^[a-zA-Z-Z0-9\.\-\" \"]+$/;
+
+                    var majorPattern = /^[a-zA-Z\.\-\" \"]+$/;
+
+                    var deptPattern = /^[a-zA-Z\.\-\" \"]+$/;
+
+                    var locationPattern = /^[a-zA-Z\.\-\" \"]+$/;
+
+                    var gradPattern = /^([a-zA-Z0-9]{2,3}[-./])?([0-9]){2}[-./]?([0-9]{4})+$/;
+
+                    var major1Pattern = /^[a-zA-Z\.\-\" \"]+$/;
+
+
+                    // assign selected option to variable target
+
+                    var target = $("#selects option:selected").val();
+
+                    // messages are empty strings by default
+
+                    var messages = "";
+
+
+
+                    //if-statement testing pattern
+                    if (!fnamePattern.test($("#firstName").val())) {
+
+                        messages += ("\n Enter a valid First Name");
+
+
+                    }
+                    if (!LnamePattern.test($("#lastName").val())) {
+
+                        messages += ("\n Enter a valid Last Name");
+
+                    }
+                    if (!emailpattern.test($("#email").val())) {
+                        // when doesnt match 
+
+                        messages += ("\n Email address should be fully valid email address \n (eg. someone@somewhere.com");
+
+                    }
+                    if (!netIDpattern.test($("#netID").val())) {
+                        
+                        messages += ("\n NetID should be entered in this format: ab555");
+                    }
+                    if (!passwdpattern.test($("#passwd").val())) {
+
+                        messages += ("\n A Password should contain more than one letter,\n numbers, and special characters");
+                    }
+                    if ($("#passwd").val() != ($("#passwdConf").val())){
+
+                        messages += ("\n Passwords should match")
+                    }
+
+                    if ($("#passwd").val().length <= 6 ) {
+
+                        messages += ("\n Password should be at least 7 characters long");
+                     }
+                    
+                    if (!telPattern.test($("#tel").val())) {
+
+                        messages += ("\n A phone number should be a fully valid \n phone number with area code (xxx)-xxx-xxxx");
+
+                    }
+                    if (!cityPattern.test($("#city").val())) {
+
+                        messages += ("\n Enter a valid city");
+
+                    }
+
+                    if (!target) {
+                        messages += ("\n Please select your role");
+                    }
+
+                    if (target == "student") {
+
+                        if (!addrPattern.test($("#address").val())) {
+
+                            messages += ("\n Enter a valid address");
+                        }
+
+
+                        if (!majorPattern.test($("#major").val())) {
+
+                            messages += ("\n Enter a term in a valid format");
+                        }
+
+                    }
+
+                    if (target == "faculty") {
+
+                        if (!deptPattern.test($("#dept").val())) {
+
+                            messages += ("\n Enter a valid department");
+                        }
+
+                        if (!locationPattern.test($("#location").val())) {
+
+                            messages += ("\n Enter a valid location");
+                        }
+
+                    }
+
+                    if (target == "alumni") {
+
+                        if (!gradPattern.test($("#graduation").val())) {
+
+                            messages += ("\n enter a graduation date in a valid format");
+                        }
+
+                        if (!major1Pattern.test($("#major1").val())) {
+
+                            messages += ("\n enter a major in valid format");
+                        }
+                    }
+
+
+                    if (!($("#chckbox").prop("checked"))) {
+
+                        messages += ("\n You should check a ckeckbox by agreeing \n terms and conditions!");
+
+
+
+
+                    }
+
+                    if (messages.length > 0) {
+                        alert(messages);
+                        return false;
+                    }
+
+                    return true;
+
+
+                });
+
+
+            });
+        </script>
+        
+        
+    </body>
+
+</html>
